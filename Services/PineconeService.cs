@@ -35,7 +35,9 @@ namespace SECAnalyzer.Services
             }
             catch (Exception ex)
             {
-                return null;
+                if(ex.Message == "NotFoundError")
+                     return null;
+                throw;
             }
         }
 
