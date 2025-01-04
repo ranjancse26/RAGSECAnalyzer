@@ -1,0 +1,34 @@
+﻿{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "Here is the Question: {{question}}"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "Here is the Context: {{context}}"
+        }
+      ]
+    }
+  ],
+  "systemInstruction": {
+    "role": "user",
+    "parts": [
+      {
+        "text": "You will be provided with a question and context. You need to analyze and respond appropriately. DO NOT Output your own thoughts."
+      }
+    ]
+  },
+  "generationConfig": {
+    "temperature": 0,
+    "topK": 40,
+    "topP": 0.95,
+    "maxOutputTokens": 8192
+  }
+}

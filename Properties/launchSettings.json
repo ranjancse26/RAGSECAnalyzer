@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SECAnalyzer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

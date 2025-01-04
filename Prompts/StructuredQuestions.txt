@@ -1,0 +1,53 @@
+﻿{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "{{question}}"
+        }
+      ]
+    }
+  ],
+  "systemInstruction": {
+    "role": "user",
+    "parts": [
+      {
+        "text": "Break down complex queries into sub-questions that can be answered individually. You will be provided with an example in <example> tag and a question to analyze in <question> tag. \n\nHere'\''s the Question: \n\n<question>\n    {{question}}\n</question>\n\nHere is an example: Compare Lyft and Uber’s 2023 performance\n\n<example>\n    What was Lyft'\''s revenue in 2023?\n    What was Uber'\''s revenue in 2023?\n    How do the revenues compare?\n</example>\n\nGo with the step-by-step approach for building the sub questions. DO NOT Output your own thoughts."
+      }
+    ]
+  },
+  "generationConfig": {
+    "temperature": 0,
+    "topK": 40,
+    "topP": 0.95,
+    "maxOutputTokens": 8192,
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "object",
+      "properties": {
+        "Response": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "type": "string"
+              },
+              "Question": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Company",
+              "Question"
+            ]
+          }
+        }
+      },
+      "required": [
+        "Response"
+      ]
+    }
+  }
+}
