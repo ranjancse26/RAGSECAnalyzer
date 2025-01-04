@@ -7,6 +7,8 @@ RAG based SEC Form 10-K Reports Analyzer
 2. Pinecone. Signup and get the Pinecone API key from https://app.pinecone.io/
 3. JINA Embedding API key can be obtained from https://jina.ai/embeddings/
 
+Please make sure to replace the appSettings.json with the above API Keys.
+
 ## Demo
 Advanced Multi Document, Sub query based RAG SEC Form 10-K Analyzer
 
